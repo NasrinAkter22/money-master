@@ -20,6 +20,12 @@ function calculate() {
     ///calculate balance Total
     const balanceTotal = incomeText - calculateTotal; 
     document.getElementById('balance').innerText = balanceTotal;
-    document.getElementById("total-expense").innerText = calculateTotal;
-
+    document.getElementById("total-expense").innerText = calculateTotal
 }
+// save button
+document.getElementById('save-button').addEventListener('click',function(){
+    const incomeInput=document.getElementById('income-filed');
+    const savingInput=document.getElementById('saving-input');
+    const savingAmount=(parseFloat(incomeInput.valu)*parseFloat(savingInput.value))/100;
+    document.getElementById('saving-amount').innerText=savingAmount;
+} )
